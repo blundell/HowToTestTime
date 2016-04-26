@@ -3,7 +3,7 @@ package com.blundell.tut.howtotesttime;
 import java.util.Calendar;
 import java.util.Date;
 
-public class WelcomeMessageGenerator {
+class WelcomeMessageGenerator {
 
     private static final WelcomeMessage AM_INFO = new WelcomeMessage(R.string.good_morning, R.color.morning_blue);
     private static final WelcomeMessage PM_INFO = new WelcomeMessage(R.string.good_evening, R.color.evening_red);

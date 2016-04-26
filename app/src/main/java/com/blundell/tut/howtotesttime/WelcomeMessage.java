@@ -3,7 +3,7 @@ package com.blundell.tut.howtotesttime;
 import android.support.annotation.ColorInt;
 import android.support.annotation.StringRes;
 
-public class WelcomeMessage {
+class WelcomeMessage {
     @StringRes
     private final int textResId;
 

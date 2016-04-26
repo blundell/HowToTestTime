@@ -1,6 +1,6 @@
 package com.blundell.tut.howtotesttime;
 
-public class Clock {
+class Clock {
 
     public long currentTimeMillis() {
         return System.currentTimeMillis();
