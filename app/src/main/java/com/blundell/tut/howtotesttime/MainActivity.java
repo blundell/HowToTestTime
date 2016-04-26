@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        WelcomeMessageGenerator generator = new WelcomeMessageGenerator();
+        WelcomeMessageGenerator generator = new WelcomeMessageGenerator(new Clock());
         WelcomeMessage welcomeMessage = generator.generate();
         TextView textView = (TextView) findViewById(R.id.main_text_view);
         textView.setText(welcomeMessage.getTextResId());
