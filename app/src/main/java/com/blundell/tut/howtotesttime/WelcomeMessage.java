@@ -6,7 +6,6 @@ import android.support.annotation.StringRes;
 class WelcomeMessage {
     @StringRes
     private final int textResId;
-
     @ColorInt
     private final int colorResId;
 
