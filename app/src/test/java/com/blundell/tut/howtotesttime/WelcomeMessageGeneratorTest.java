@@ -29,6 +29,17 @@ public class WelcomeMessageGeneratorTest {
         assertEquals(R.string.good_evening, R.color.evening_red, message);
     }
 
+    @Test
+    public void givenItIsMidday_thenRedMorningGreeting() throws Exception {
+        SettableClock clock = new SettableClock();
+        clock.time = getHourMinuteSecondAsTimeInMillis(12, 0, 0);
+        WelcomeMessageGenerator generator = new WelcomeMessageGenerator(clock);
+
+        WelcomeMessage message = generator.generate();
+
+        assertEquals(R.string.good_morning, R.color.morning_blue, message);
+    }
+
     private long getHourMinuteSecondAsTimeInMillis(int hour, int minute, int second) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, hour);
