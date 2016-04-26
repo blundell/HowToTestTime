@@ -11,10 +11,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        InformationCalculator informationCalculator = new InformationCalculator();
-        Information information = informationCalculator.calculate();
-        TextView informationView = (TextView) findViewById(R.id.main_text_view);
-        informationView.setText(information.getTextResId());
-        informationView.setBackgroundResource(information.getColorResId());
+        WelcomeMessageCalculator calculator = new WelcomeMessageCalculator();
+        WelcomeMessage welcomeMessage = calculator.fetch();
+        TextView textView = (TextView) findViewById(R.id.main_text_view);
+        textView.setText(welcomeMessage.getTextResId());
+        textView.setBackgroundResource(welcomeMessage.getColorResId());
     }
 }

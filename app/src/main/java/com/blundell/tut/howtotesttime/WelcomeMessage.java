@@ -3,14 +3,14 @@ package com.blundell.tut.howtotesttime;
 import android.support.annotation.ColorInt;
 import android.support.annotation.StringRes;
 
-public class Information {
+public class WelcomeMessage {
     @StringRes
     private final int textResId;
 
     @ColorInt
     private final int colorResId;
 
-    public Information(int textResId, int colorResId) {
+    public WelcomeMessage(int textResId, int colorResId) {
         this.textResId = textResId;
         this.colorResId = colorResId;
     }
@@ -28,11 +28,11 @@ public class Information {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof Information)) {
+        if (!(o instanceof WelcomeMessage)) {
             return false;
         }
 
-        Information that = (Information) o;
+        WelcomeMessage that = (WelcomeMessage) o;
 
         return textResId == that.textResId && colorResId == that.colorResId;
 
