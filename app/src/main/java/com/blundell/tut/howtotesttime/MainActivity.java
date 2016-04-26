@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        WelcomeMessageCalculator calculator = new WelcomeMessageCalculator();
-        WelcomeMessage welcomeMessage = calculator.fetch();
+        WelcomeMessageGenerator generator = new WelcomeMessageGenerator();
+        WelcomeMessage welcomeMessage = generator.generate();
         TextView textView = (TextView) findViewById(R.id.main_text_view);
         textView.setText(welcomeMessage.getTextResId());
         textView.setBackgroundResource(welcomeMessage.getColorResId());

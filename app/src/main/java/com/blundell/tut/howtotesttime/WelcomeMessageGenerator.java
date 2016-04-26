@@ -3,12 +3,12 @@ package com.blundell.tut.howtotesttime;
 import java.util.Calendar;
 import java.util.Date;
 
-public class WelcomeMessageCalculator {
+public class WelcomeMessageGenerator {
 
     private static final WelcomeMessage AM_INFO = new WelcomeMessage(R.string.good_morning, R.color.morning_blue);
     private static final WelcomeMessage PM_INFO = new WelcomeMessage(R.string.good_evening, R.color.evening_red);
 
-    public WelcomeMessage fetch() {
+    public WelcomeMessage generate() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 12);
         calendar.set(Calendar.MINUTE, 0);
