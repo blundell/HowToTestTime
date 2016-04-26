@@ -16,16 +16,20 @@ public class WelcomeMessageGenerator {
 
     public WelcomeMessage generate() {
         Date now = new Date(clock.currentTimeMillis());
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 12);
-        calendar.set(Calendar.MINUTE, 0);
-        calendar.set(Calendar.SECOND, 0);
-        Date midday = calendar.getTime();
+        Date midday = getMiddayToday();
         if (now.after(midday)) {
             return PM_INFO;
         } else {
             return AM_INFO;
         }
+    }
+
+    private Date getMiddayToday() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
     }
 
 }
