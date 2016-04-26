@@ -8,7 +8,7 @@ import org.junit.Test;
 public class WelcomeMessageGeneratorTest {
 
     @Test
-    public void givenItIsBeforeMidday_thenRedMorningGreeting() throws Exception {
+    public void givenItIsBeforeMidday_thenBlueMorningGreeting() throws Exception {
         SettableClock clock = new SettableClock();
         clock.time = getHourMinuteSecondAsTimeInMillis(11, 59, 59);
         WelcomeMessageGenerator generator = new WelcomeMessageGenerator(clock);
@@ -19,7 +19,7 @@ public class WelcomeMessageGeneratorTest {
     }
 
     @Test
-    public void givenItIsAfterMidday_thenBlueEveningGreeting() throws Exception {
+    public void givenItIsAfterMidday_thenRedEveningGreeting() throws Exception {
         SettableClock clock = new SettableClock();
         clock.time = getHourMinuteSecondAsTimeInMillis(12, 0, 1);
         WelcomeMessageGenerator generator = new WelcomeMessageGenerator(clock);
@@ -30,7 +30,7 @@ public class WelcomeMessageGeneratorTest {
     }
 
     @Test
-    public void givenItIsMidday_thenRedMorningGreeting() throws Exception {
+    public void givenItIsMidday_thenBlueMorningGreeting() throws Exception {
         SettableClock clock = new SettableClock();
         clock.time = getHourMinuteSecondAsTimeInMillis(12, 0, 0);
         WelcomeMessageGenerator generator = new WelcomeMessageGenerator(clock);
